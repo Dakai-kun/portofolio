@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    background-color: #7fd677;
+    font-family: 'Ghibli Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ghibli Bold'), url('Eyad Al-Samman - Ghibli.woff') format('woff');
+  }
+
+  /* @font-face {
+    font-family: 'Ghibli Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ghibli Regular'), url('Eyad Al-Samman - Ghibli.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Ghibli Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ghibli Bold'), url('Eyad Al-Samman - Ghibli-Bold.woff') format('woff');
+    } */
+
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .header {
+    background: url(img/howl.jpeg);
+    background-size: cover;
+    padding: 19.5%;
+    text-align: center;
+    color: #f2f2f2;
+  }
+
+  h3{
+    font-size: 45px;
+    text-align: center;
+  }
+
+  h3 a {
+    text-decoration: none;
+    color: #f2f2f2;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    padding-left: 5px;
+    margin-top: 15px;
+  }
+
+  h3 a::before,
+  h3 a::after,
+  span::before,
+  span::after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    transition: 1s;
+  }
+
+  h3 a::before{
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid #eeda9e ;
+    border-left: 2px solid #eeda9e  ;
+  }
+
+  h3 a::after{
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid #eeda9e ;
+    border-right: 2px solid #eeda9e ;  
+  }
+
+  span::before{
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid #eeda9e  ;
+    border-left: 2px solid #eeda9e  ;
+  }
+
+  span::after{
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid #eeda9e  ;
+    border-right: 2px solid #eeda9e ;
+  }
+
+  h3 a:hover::before,
+  h3 a:hover::after,
+  h3 a:hover span::before,
+  h3 a:hover span::after{
+    width: calc(180px / 2);
+    height: calc(50px / 2);
+  }
+
+  h2{
+    font-size: 40px;
+    max-width: 110px;
+  }
+
+  strong{
+      color:#7fd677 ;
+  }
+  
+  #navbar {
+    overflow: hidden;
+    background-color: #23895d;
+    float: center;
+    z-index: 1000;
+    text-shadow: #fff  3px;
+  }
+  
+  #navbar a {
+    float: center;
+    display: inline-flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 17px 10px 17px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #navbar a:hover {
+    color: #eeda9e;
+    border-bottom: #eeda9e 3px solid;
+  }
+  
+  /* .content1 {
+    background: #7fd677;
+    display: flex;
+    flex-direction: column;
+  } */
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content1 {
+    padding-top: 60px;
+  }
+
+  .button-size{
+    font-size: 25px;
+    border-radius: 12px;
+    color: #fff;
+    border: 3px solid #23895d;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  .title-about{
+    border-bottom: 3px solid #f2f2f2;
+    text-align: center;
+    float: center;
+    margin: 0 0 10% 50% ;
+  }
+  
+  /* .content1 .card{
+    /* position: absolute; */
+    /* top: 135%; */
+    /* left:60%; */
+  /* } */ 
+
+  .text-about{
+    display: flex;
+    text-align: left;  
+  }
+
+  .img-card{
+    width: 250px;
+    height: 250px;
+  }
+
+  .container{
+    background-color: #7fd677;
+  }
+
+  .card-text{
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 25px;
+  }
+
+  .card{
+    max-height: 1000px; 
+    background-color: transparent;
+  }
+
+  .card-text-quote{
+    background-color: #23895d;
+    padding: 1px 4px 1px 4px;
+    border-radius: 6px;
+    color: #fff;
+  }
+
+  .card-title{
+    font-weight: bolder;
+    color: #fff;
+  }
+
+  .fa-arrow-down{
+    animation: downtop 3s infinite linear;
+  }
+
+  @keyframes downtop{
+    0%{transform: translateY(0px);}
+    20%{transform: translateY(3px);}
+    40%{transform: translateY(0px);}
+    60%{transform: translateY(3px);}
+    80%{transform: translateY(0px);}
+    90%{transform: translateY(3px);}
+    100%{transform: translateY(0px);}
+
+  }
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background:linear-gradient(to bottom, #23895d, #7fd677);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .title-skill{
+    margin-left:50%;
+    border-bottom: 3px solid #f2f2f2;
+    float: center;
+  }
+
+  .skills h2{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 16px;
+    z-index: 1;
+  }
+
+  .progress-bar{
+    background: #959595;
+    width: 750px;
+    height: 12.5px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .progress-bar div{
+    height: 100%;
+    border-left: 5px;
+    width: 0%;
+    z-index: 3;
+  }
+
+  .progress-bar div span{
+    height: 43px;
+    width: 20px;
+    border-radius: 50%;
+    background: #eeda9e;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    z-index: 100;
+  }
+
+  .html{
+    background: red;
+    animation: html 1s linear forwards;
+  }
+  .css{
+    background: blue;
+    animation: css 1s linear forwards;
+  }
+  .javascript{
+    background: cyan;
+    animation: javascript 1s linear forwards;
+  }
+  .php{
+    background: black;
+    animation: php 1s linear forwards;
+  }
+
+  @keyframes html{
+    100%{
+      width: 86%;
+    }
+  }
+
+  @keyframes css{
+    100%{
+      width: 74%;
+    }
+  }
+
+  @keyframes javascript{
+    100%{
+      width: 65%;
+    }
+  }
+
+  @keyframes php{
+    100%{
+      width: 54%;
+    }
+  }
+
+  .html span{
+    border: 1px solid red;
+    background: red;
+  }
+  .css span{
+    border: 1px solid blue;
+    background: blue;
+  }
+  .javascript span{
+    border: 1px solid cyan;
+    background: cyan;
+  }
+  .php span{
+    border: 1px solid black;
+    background: black;
+  }
